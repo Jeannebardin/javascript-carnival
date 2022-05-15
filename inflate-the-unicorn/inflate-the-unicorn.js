@@ -30,6 +30,26 @@ function clicked(event) {
 
     unicorn.src = './images/unicorn-' + inflationLevel0 + '.png'
   }
+
+  if (unicorn.id == 'uni1') {
+    inflationLevel1++
+
+    if (inflationLevel1 == 4) inflationLevel1 = 0
+
+    console.log('the inflation level is ' + inflationLevel1)
+
+    unicorn.src = './images/unicorn-' + inflationLevel1 + '.png'
+  }
+
+  if (unicorn.id == 'uni2') {
+    inflationLevel2++
+
+    if (inflationLevel2 == 4) inflationLevel2 = 0
+
+    console.log('the inflation level is ' + inflationLevel2)
+
+    unicorn.src = './images/unicorn-' + inflationLevel2 + '.png'
+  }
 }
 
 // console.log('Inflate The Unicorn!')
