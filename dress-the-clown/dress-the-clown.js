@@ -32,6 +32,7 @@ var body = document.getElementById('body')
 var shoes = document.getElementById('shoes')
 
 function changeHorizontal(shift) {
+  console.log('hello')
   if (mainIndex == 0) {
     headIndex += shift
 
@@ -41,26 +42,26 @@ function changeHorizontal(shift) {
 
     head.src = './images/head' + headIndex + '.png'
   }
-}
 
-if (mainIndex == 1) {
-  bodyIndex += shift
+  if (mainIndex == 1) {
+    bodyIndex += shift
 
-  if (bodyIndex < 0) bodyIndex = 5
+    if (bodyIndex < 0) bodyIndex = 5
 
-  if (bodyIndex > 5) bodyIndex = 0
+    if (bodyIndex > 5) bodyIndex = 0
 
-  body.src = './images/body' + bodyIndex + '.png'
-}
+    body.src = './images/body' + bodyIndex + '.png'
+  }
 
-if (mainIndex == 2) {
-  shoesIndex += shift
+  if (mainIndex == 2) {
+    shoesIndex += shift
 
-  if (shoesIndex < 0) shoesIndex = 5
+    if (shoesIndex < 0) shoesIndex = 5
 
-  if (shoesIndex > 5) shoesIndex = 0
+    if (shoesIndex > 5) shoesIndex = 0
 
-  shoes.src = './images/shoes' + shoesIndex + '.png'
+    shoes.src = './images/shoes' + shoesIndex + '.png'
+  }
 }
 
 function changeVertical(shift) {
@@ -69,3 +70,5 @@ function changeVertical(shift) {
   if (mainIndex < 0) mainIndex = 2
   if (mainIndex > 2) mainIndex = 0
 }
+
+//Reading your whole code, I believe that you were trying to wrap all the conditions to change head, body and shoes into the changeHorizontal function however there's an extra curly bracket after the head.src = './images/head' + headIndex + '.png' that should have been placed somewhere else. This is because as it stands right now, it closes the function and therefore whenever changeHorizontal function is called, it only executes the code from if (mainIndex == 0) { until the head.src = ... + '.png'

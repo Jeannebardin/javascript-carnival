@@ -4,13 +4,13 @@
 
 console.log('Whack-a-Mole!')
 
-var cells = document.getElementsByTagName('TD')
+let cells = document.getElementsByTagName('TD')
 
-var randomIndex = Math.floor(Math.random() * cells.length)
+let randomIndex = Math.floor(Math.random() * cells.length)
 
-var randomCell = cells[randomIndex]
+let randomCell = cells[randomIndex]
 
-var mole = document.createElement('img')
+let mole = document.createElement('img')
 
 mole.src = './mole.PNG'
 
@@ -26,6 +26,7 @@ function whackedMole() {
   randomCell = cells[randomIndex]
   randomCell.appendChild(mole)
 
-  var audio = new Audio('./whack-audio.wav')
+  let audio = new Audio('./whack-audio.wav')
   audio.play()
 }
+// Audio is a javascripty thing.. doesnt need to be referenced in HTML
