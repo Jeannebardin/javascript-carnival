@@ -11,13 +11,17 @@ var randomIndex = Math.floor(Math.random() * cells.length)
 var randomCell = cells[randomIndex]
 
 var mole = document.createElement('img')
+
 mole.src = './mole.PNG'
+
 mole.id = 'mole'
+
 randomCell.appendChild(mole)
 
-mole.onclock = whackedMole
+mole.onclick = whackedMole
 
 function whackedMole() {
+  console.log('Michael is awesome!')
   randomIndex = Math.floor(Math.random() * cells.length)
   randomCell = cells[randomIndex]
   randomCell.appendChild(mole)
